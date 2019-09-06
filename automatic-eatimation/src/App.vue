@@ -2,6 +2,7 @@
   <div id="app">
     <NavBar/>
     <SideBar/>
+    <router-view></router-view>
   </div>
 </template>
 
