@@ -1,5 +1,4 @@
 <template>
-<div class="container">
     <div class="sideBar">
         <div class="dashBoard">
           <div class="image">
@@ -23,7 +22,7 @@
           </div>
           <div class="label">
             <label>
-              <router-link to="/">Add User </router-link>
+              <router-link :to="{name: 'users'}">Add User </router-link>
             </label>
           </div>
         </div>
@@ -54,10 +53,6 @@
           </div>
         </div>
     </div>
-    <div class="routing">
-    <router-view/>
-    </div>
-</div>
 </template>
 
 <script>
@@ -70,7 +65,8 @@ export default {
 <style scoped>
 .sideBar{
   background-color: #EAE234;
-  height: 563px;
+    position: fixed;
+  height: 100%;
   width: 250px;
   padding-top: 30px;
 }

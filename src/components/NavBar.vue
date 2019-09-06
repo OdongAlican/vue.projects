@@ -36,7 +36,7 @@
             <img src="data:image/png;base64,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" alt="Settings">
           </div>
           <div class="label">
-            <label> 
+            <label>
               Settings
             </label>
           </div>
@@ -57,7 +57,7 @@
           </div>
           <div class="label">
             <label>
-              Logout 
+              Logout
             </label>
           </div>
         </div>
@@ -83,7 +83,7 @@
 <style scoped>
 
 .nav{
-  width: 1298px;
+  width: 100%;
   height: 75px;
   background-color: #000002;
   display: flex;
@@ -146,12 +146,12 @@
 
 .lowerDropdown {
   position: fixed;
-  z-index: 1; 
-  margin-top: 10px; 
+  z-index: 1;
+  margin-top: 10px;
   margin-left: -30px;
   border-radius: 5px;
-  width: 120px; 
-  height: 120px; 
+  width: 120px;
+  height: 120px;
   overflow: auto;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
