@@ -15,30 +15,30 @@
                     <div class="titleValue">
                         <div class="mister">
                             <div class="input">
-                                <input type="radio" name="title" >
+                                <input type="radio" name="title" id="mr">
                             </div>
                             <div class="label">
-                                <label>
+                                <label for="mr">
                                     Mr.
                                 </label>
                             </div>
                         </div>
                         <div class="mises">
                             <div class="input">
-                                <input type="radio" name="title">
+                                <input type="radio" name="title" id="mrs">
                             </div>
                             <div class="label">
-                                <label>
+                                <label for="mrs">
                                     Mrs.
                                 </label>
                             </div>
                         </div>
                         <div class="miss">
                             <div class="input">
-                                <input type="radio" name="title">
+                                <input type="radio" name="title" id="miss">
                             </div>
                             <div class="label">
-                                <label>
+                                <label for="miss">
                                     Miss.
                                 </label>
                             </div>
@@ -48,22 +48,22 @@
                 <div class="name">
                     <div class="firstName">
                         <div class="label">
-                            <label>
+                            <label for="firstName">
                                 First Name:
                             </label>
                         </div>
                         <div class="input">
-                            <input type="text" name="firstName" id="firstName">
+                            <input type="text" name="firstName" id="firstName" v-model="user.firstName">
                         </div>
                     </div>
                     <div class="lastName">
                         <div class="label">
-                            <label>
+                            <label for="lastName">
                                 Last Name:
                             </label>
                         </div>
                         <div class="input">
-                            <input type="text" name="lastName" id="lastName">
+                            <input type="text" name="lastName" id="lastName" v-model="user.lastName">
                         </div>
                     </div>
                 </div>
@@ -73,8 +73,8 @@
                             <input type="radio" name="position" id="consultant">
                         </div>
                         <div class="label">
-                            <label>
-                                Concultant
+                            <label for="consultant">
+                                Consultant
                             </label>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                             <input type="radio" name="position" id="projectManager">
                         </div>
                         <div class="label">
-                            <label>
+                            <label for="projectManager">
                                 Project Manager
                             </label>
                         </div>
@@ -93,7 +93,7 @@
                             <input type="radio" name="position" id="developer">
                         </div>
                         <div class="label">
-                            <label>
+                            <label for="developer">
                                 Developer
                             </label>
                         </div>
@@ -102,22 +102,22 @@
                 <div class="contact">
                     <div class="email">
                         <div class="label">
-                            <label>
+                            <label for="email">
                                 Email Address:
                             </label>
                         </div>
                         <div class="input">
-                            <input type="text" name="email" id="email">
+                            <input type="text" name="email" id="email" v-model="user.email">
                         </div>
                     </div>
                     <div class="phone">
                         <div class="label">
-                            <label>
+                            <label for="phone">
                                 Phone Number:
                             </label>
                         </div>
                         <div class="input">
-                            <input type="text" name="phone" id="phone">
+                            <input type="text" name="phone" id="phone" v-model="user.phone">
                         </div>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                     </div>
                     <div class="bottom">
                         <div class="search">
-                            <input type="text" placeholder="search">
+                            <input type="text" placeholder="search" v-model="searchWords.searchConsultant">
                         </div>
                         <div class="one"></div>
                         <div class=""></div>
@@ -164,7 +164,7 @@
                     </div>
                     <div class="bottom">
                         <div class="search">
-                            <input type="text" placeholder="search">
+                            <input type="text" placeholder="search" v-model="searchWords.searchProjectManager">
                         </div>
                         <div class="one"></div>
                         <div class=""></div>
@@ -178,7 +178,7 @@
                     </div>
                     <div class="bottom">
                         <div class="search">
-                            <input type="text" placeholder="search">
+                            <input type="text" placeholder="search" searchWords.searchDeveloper>
                         </div>
                         <div class="one"></div>
                         <div class="two"></div>
@@ -195,7 +195,19 @@
         name: "Users",
         data() {
             return {
-                form: false
+                form: false,
+                searchWords: {
+                    searchConsultant: '',
+                    searchProjectManager: '',
+                    searchDeveloper: '',
+
+                },
+                user: {
+                    firstName: '',
+                    lastName: '',
+                    phone: '',
+                    email: '',
+                }
             }
         },
         created() {
