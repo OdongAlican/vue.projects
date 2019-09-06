@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <NavBar/>
-    <SideBar/>
-    <router-view></router-view>
+    <SideBar @createUser="handleCreate" @viewUser="handleView"/>
+    <router-view  ref="component"/>
   </div>
 </template>
 
@@ -15,7 +15,15 @@ export default {
   components: {
     NavBar,
     SideBar
-  }
+  },
+  methods: {
+    handleCreate(){
+      this.$children[2].form = true;
+    },
+    handleView(){
+      this.$children[2].form = false;
+    }
+  },
 }
 </script>
 

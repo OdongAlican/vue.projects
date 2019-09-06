@@ -135,6 +135,57 @@
                 </div>
             </div>
         </div>
+        <div v-if="!form" class="details">
+            <div class="title">
+                <label>
+                    VIEW USERS
+                </label>
+            </div>
+            <div class = " center ">
+                <div class="left">
+                    <div class="top">
+                        <label>
+                            CONSULTANT
+                        </label>
+                    </div>
+                    <div class="bottom">
+                        <div class="search">
+                            <input type="text" placeholder="search">
+                        </div>
+                        <div class="one"></div>
+                        <div class=""></div>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="top">
+                        <label>
+                            PROJECT MANAGER
+                        </label>
+                    </div>
+                    <div class="bottom">
+                        <div class="search">
+                            <input type="text" placeholder="search">
+                        </div>
+                        <div class="one"></div>
+                        <div class=""></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="top">
+                        <label>
+                            DEVELOPER
+                        </label>
+                    </div>
+                    <div class="bottom">
+                        <div class="search">
+                            <input type="text" placeholder="search">
+                        </div>
+                        <div class="one"></div>
+                        <div class="two"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </template>
@@ -144,11 +195,10 @@
         name: "Users",
         data() {
             return {
-                form: true
+                form: false
             }
         },
         created() {
-            // console.log(this.$route)
         },
     }
 </script>
